@@ -1,0 +1,32 @@
+html {
+  background-color: rgb(51, 48, 48);
+}
+
+h3 {
+  color: red;
+  font-size: 15px;
+}
+p {
+  font-size: 10px;
+  color: rgb(216, 213, 213);
+}
+
+.main_border {
+  border: 3px solid rgb(80, 78, 78);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+.main_box {
+  display: block;
+}
+
+.main_img {
+  width: 100%;
+}
+
+.main_cast {
+  color: red;
+  font-size: 10px;
+  font-weight: bold;
+}
