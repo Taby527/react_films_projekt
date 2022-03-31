@@ -5,7 +5,6 @@ import "./components/Movie/style.css";
 import Header from "./components/Header/header";
 import Movie from "./components/Movie/movie";
 import "./components/Header/style.css";
-import Actor from "./components/actors/actor";
 
 const movies = [
   {
@@ -16,14 +15,7 @@ const movies = [
     rating: 8.9,
     director: "Quentin Tarantino",
     genre: "crime, drama",
-    name: "John Travolta",
-    as: "Vincent Vega",
-    name: "Samuel L. Jackson",
-    as: "Jules Winnfield",
-    name: "Uma Thurman",
-    as: "Mia Wallace",
-    name: "Bruce Willis",
-    as: "Butch Coolidge",
+    cast: "John Travolta",
   },
   {
     id: 2,
@@ -33,14 +25,7 @@ const movies = [
     rating: 8.3,
     director: "Sam Mendes",
     genre: "action, drama, war",
-    name: "Dean-Charles Chapman",
-    as: "Lance Corporal Blake",
-    name: "George MacKay",
-    as: "Lance Corporal Schofield",
-    name: "Daniel Mays",
-    as: "Sergeant Sanders",
-    name: "Colin Firth",
-    as: "General Erinmore",
+    cast: "Dean-Charles Chapman",
   },
   {
     id: 3,
@@ -50,14 +35,7 @@ const movies = [
     rating: 8.0,
     director: "Damien Chazelle",
     genre: "comedy, drama, music",
-    name: "Ryan Gosling",
-    as: "Sebastian",
-    name: "Emma Stone",
-    as: "Mia",
-    name: "Rosemarie DeWitt",
-    as: "Laura",
-    name: "J.K. Simmons",
-    as: "Bill",
+    cast: "Ryan Gosling",
   },
   {
     id: 4,
@@ -67,14 +45,7 @@ const movies = [
     rating: 8.8,
     director: "Christopher Nolan",
     genre: "action, adventure, sci-fi",
-    name: "Leonardo DiCaprio",
-    as: "Cobb",
-    name: "Joseph Gordon-Levitt",
-    as: "Arthur",
-    name: "Elliot Page",
-    as: "Ariadne",
-    name: "Ken Watanabe",
-    as: "Saito",
+    cast: "Leonardo DiCaprio",
   },
   {
     id: 5,
@@ -84,16 +55,7 @@ const movies = [
     rating: 8.0,
     director: "James Gunn",
     genre: "action, adventure, comedy",
-    name: "Chris Pratt",
-    as: "Peter Quill",
-    name: "Vin Diesel",
-    as: "Groot (voice)",
-    name: "Bradley Cooper",
-    as: "Rocket (voice)",
-    name: "Zoe Saldana",
-    as: "Gamora",
-    name: "Dave Bautista",
-    as: "Drax",
+    cast: "Chris Pratt",
   },
   {
     id: 6,
@@ -103,12 +65,7 @@ const movies = [
     rating: 8.5,
     director: "Roger Allers, Rob Minkoff",
     genre: "animation, adventure, drama",
-    name: "Matthew Broderick",
-    as: "Simba (voice)",
-    name: "Jeremy Irons",
-    as: "Scar (voice)",
-    name: "James Earl Jones",
-    as: "Mufasa (voice)",
+    cast: "Matthew Broderick",
   },
   {
     id: 7,
@@ -118,12 +75,7 @@ const movies = [
     rating: 7.5,
     director: "Martin Scorsese",
     genre: "biography, drama",
-    name: "Leonardo DiCaprio",
-    as: "Howard Hughes",
-    name: "Cate Blanchett",
-    as: "Katharine Hepburn",
-    name: "Kate Beckinsale",
-    as: "Ava Gardner",
+    cast: "Leonardo DiCaprio",
   },
   {
     id: 8,
@@ -133,12 +85,7 @@ const movies = [
     rating: 8.3,
     director: "Stanley Kubrick",
     genre: "adventure, sci-fi",
-    name: "Keir Dullea",
-    as: "Dr. Dave Bowman",
-    name: "Gary Lockwood",
-    as: "Dr. Frank Poole",
-    name: "Douglas Rain",
-    as: "HAL 9000 (voice)",
+    cast: "Keir Dullea",
   },
   {
     id: 9,
@@ -148,12 +95,7 @@ const movies = [
     rating: 8.6,
     director: "Bong Joon Ho",
     genre: "comedy, drama, thriller",
-    name: "Kang-ho Song",
-    as: "Ki Taek",
-    name: "Sun-kyun Lee",
-    as: "Dong Ik",
-    name: "Yeo-jeong Cho",
-    as: "Yeon Kyo",
+    cast: "Kang-ho Song",
   },
   {
     id: 10,
@@ -163,12 +105,7 @@ const movies = [
     rating: 7.7,
     director: "Alfonso Cuarón",
     genre: "adventure, drama, sci-fi",
-    name: "Sandra Bullock",
-    as: "Ryan Stone",
-    name: "George Clooney",
-    as: "Matt Kowalski",
-    name: "Ed Harris",
-    as: "Mission Control (voice)",
+    cast: "Sandra Bullock",
   },
 ];
 
@@ -185,9 +122,7 @@ const App = () => (
           year={movie.year}
           genre={movie.genre}
           director={movie.director}
-          cast={movies.map((actor) => (
-            <Actor key={actor.name} name={actor.name} as={actor.as} />
-          ))}
+          cast={movie.cast}
         />
       ))}
     </div>
